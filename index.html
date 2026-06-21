@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Feliz 15 — carta de Eduardo para su amor. Una tarjeta interactiva con pétalos animados y un mensaje desde el corazón.">
+  <meta name="theme-color" content="#FFF8F9">
+  <title>Feliz 15 Mi Vida 💕</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --rose: #C2556A;
+      --blush: #F2B8C6;
+      --deep: #3B1A25;
+      --cream: #FFF8F9;
+      --max-width: 680px;
+    }
+    html, body { height: 100%; }
+    body { background: var(--cream); color: var(--deep); font-family: 'Lato', sans-serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
+
+    /* Petals / decorative layer */
+    .petals { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .petal { position: absolute; top: -40px; opacity: 0; animation: fall linear infinite; will-change: transform, opacity; }
+    @keyframes fall { 0% { transform: translateY(-40px) rotate(0deg); opacity: .9; } 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+
+    /* Brand */
+    .marca { position: fixed; top: 16px; left: 20px; z-index: 100; display: flex; align-items: center; gap: 8px; }
+    .marca-icono { width: 34px; height: 34px; background: var(--rose); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; }
+    .marca-texto { font-family: 'Lato', sans-serif; font-size: .78rem; letter-spacing: .04em; color: var(--deep); }
+    .marca-texto span { color: var(--rose); font-weight: 400; }
+
+    /* Layout */
+    main { position: relative; z-index: 1; max-width: var(--max-width); margin: 0 auto; padding: 70px 28px 80px; }
+    header { text-align: center; margin-bottom: 32px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 8vw, 3.8rem); line-height: 1.15; color: var(--deep); }
+    h1 em { font-style: italic; color: var(--rose); }
+
+    .divider { display: flex; align-items: center; gap: 14px; margin: 24px 0; color: var(--blush); }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--blush); }
+
+    .letter { font-size: 1.05rem; line-height: 1.9; color: var(--deep); margin-bottom: 1.2em; }
+    .letter p { margin-bottom: 1em; }
+
+    .firma { text-align: right; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--rose); margin-top: 36px; line-height: 1.8; }
+    .banner { margin-top: 56px; background: var(--rose); color: #fff; border-radius: 4px; padding: 22px 24px; text-align: center; }
+    .banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.2rem, 4.5vw, 1.6rem); font-weight: 400; margin: 0; }
+
+    /* Reduced motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .petal { animation: none; opacity: .95; }
+    }
+
+    /* Small screens */
+    @media (max-width: 420px) {
+      main { padding: 60px 18px 70px; }
+      .marca { left: 12px; top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <div class="marca" aria-hidden="true">
+    <div class="marca-icono">EL</div>
+    <div class="marca-texto"><span>Eduardo</span> Lázaro</div>
+  </div>
+
+  <main role="main">
+    <header>
+      <h1>Feliz <em>Cumpleaños</em><br>Mi Vida 💕</h1>
+    </header>
+
+    <div class="divider" aria-hidden="true">💕</div>
+
+    <article class="letter" aria-label="Carta de cumpleaños">
+      <p>Feliz cumpleaños mi amor, espero que la pases súper bien en tu día mi vida. Gracias por estar conmigo en todos los momentos importantes de mi vida; quiero que sepas que te amo demasiado mi vida. Te amo como no tienes una idea, eres la mujer más bella, maravillosa y lista que me encontré. Estoy tan enamorado de ti, de tu voz, tu risa, tu carácter, tu forma de ser — todo de ti me encanta.</p>
+
+      <p>Para mí es lo más hermoso y bello que puede existir. Tal vez no esté contigo en este cumpleaños como la anterior vez, pero quiero que me tengas en tu pensamiento y en tu corazón para ser tu compañía. Tal vez falte mucho para vernos y sea tardado, pero espero verte para poder darte el amor que no te he podido dar en este año que no he estado junto a tu lado.</p>
+
+      <p>Perdón de las veces que te he hecho llorar y sentir mal. A veces trato de ser bueno y se me olvida cómo comportarme. Te amo mucho mi vida, mi canelita preciosa. Gracias por el tiempo que me has dado a tu lado; te amo y te amaré todas mis vidas. Te amo y siempre te amaré, espero que tu amor siempre me pertenezca y estés para mí.</p>
+
+      <p>Eres la mujer a la cual mi corazón quiere y prefiere, y aunque pasen muchas cosas y adversidades, mi corazón siempre te amará y en mi mente estarás. Te amo mi vida; para mí sigues siendo mi bebé de 13 años que conocí cuando estaba en 2do de secundaria. No sabía lo que iba a suceder, pero sabía que sería muy bonito intentar saber qué nos iba a dar el tiempo.</p>
+
+      <p>Espero que sepas que mi amor por ti es tan grande que si te lo diera en tus manos no te iba a caber de lo inmenso que es. Me haces sonreír y me haces amarte cada segundo. Perdón por no ser la persona justa y correcta; quisiera serlo para calmar tus dolores y tristezas para que no sufras de nada. Perdón por no estar presente y estar a través de una pantalla; si por mí fuera estaría todo el día a tu lado diciéndote lo mucho que te amo.</p>
+
+      <p>Sé que no encontraremos personas que nos complementen o combinen con nosotros, ya que sabemos que nuestro amor por el uno y por el otro es único. Espero que nunca me dejes de amar, eso me haría el hombre más solitario y triste. Quiero que sepas que gracias por tantas horas de plática y tantos sentimientos mutuos; te amo y te amaré 3 millones de veces, y si no te amaré 3 billones de veces, hasta que ya no exista un cosmos.</p>
+
+      <p>¡Feliz 15 mi vida hermosa! Te amo y siempre te amaré, nunca olvides mi amor por ti y nunca olvides lo mucho que te amo💕.</p>
+
+      <div class="firma">
+        Con todo mi corazón y el que siempre te amará<br>
+        att: Eduardo
+      </div>
+
+      <div class="banner" role="note" aria-label="Felicidades">
+        <h2>¡Feliz 15 Mi Vida Hermosa! 🎉💕</h2>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    (function() {
+      const symbols = ['💕','🌸','🌹','✨','💖','🌷','💗'];
+      const container = document.getElementById('petals');
+      const count = 30;
+      const frag = document.createDocumentFragment();
+
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('span');
+        el.className = 'petal';
+        el.setAttribute('aria-hidden', 'true');
+        el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        el.style.left = (Math.random() * 100) + 'vw';
+        el.style.animationDuration = (5 + Math.random() * 10) + 's';
+        el.style.animationDelay = (Math.random() * 12) + 's';
+        el.style.fontSize = (0.9 + Math.random() * 1) + 'rem';
+        // slight horizontal drift via transform-origin and translateX in css animation would be prettier,
+        // but random left + rotation gives a nice organic feel.
+        frag.appendChild(el);
+      }
+
+      container.appendChild(frag);
+    })();
+  </script>
+</body>
+</html>
